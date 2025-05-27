@@ -6,17 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4B2CC12D2DE6482F00E6B226 /* BudgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CC12A2DE6482F00E6B226 /* BudgetApp.swift */; };
+		4B2CC12E2DE6482F00E6B226 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CC12B2DE6482F00E6B226 /* ContentView.swift */; };
+		4B2CC12F2DE6482F00E6B226 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CC1292DE6482F00E6B226 /* Assets.xcassets */; };
+		4B2CC1322DE6484B00E6B226 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CC1312DE6484B00E6B226 /* CoreDataProvider.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		4B2CC11B2DE6439D00E6B226 /* Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B2CC1292DE6482F00E6B226 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B2CC12A2DE6482F00E6B226 /* BudgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetApp.swift; sourceTree = "<group>"; };
+		4B2CC12B2DE6482F00E6B226 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4B2CC1312DE6484B00E6B226 /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		4B2CC11D2DE6439D00E6B226 /* Budget */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Budget;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4B2CC1182DE6439D00E6B226 /* Frameworks */ = {
@@ -32,7 +35,7 @@
 		4B2CC1122DE6439D00E6B226 = {
 			isa = PBXGroup;
 			children = (
-				4B2CC11D2DE6439D00E6B226 /* Budget */,
+				4B2CC12C2DE6482F00E6B226 /* Budget */,
 				4B2CC11C2DE6439D00E6B226 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +46,25 @@
 				4B2CC11B2DE6439D00E6B226 /* Budget.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4B2CC12C2DE6482F00E6B226 /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				4B2CC1302DE6484000E6B226 /* Providers */,
+				4B2CC12A2DE6482F00E6B226 /* BudgetApp.swift */,
+				4B2CC12B2DE6482F00E6B226 /* ContentView.swift */,
+				4B2CC1292DE6482F00E6B226 /* Assets.xcassets */,
+			);
+			path = Budget;
+			sourceTree = "<group>";
+		};
+		4B2CC1302DE6484000E6B226 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				4B2CC1312DE6484B00E6B226 /* CoreDataProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +81,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				4B2CC11D2DE6439D00E6B226 /* Budget */,
 			);
 			name = Budget;
 			packageProductDependencies = (
@@ -109,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B2CC12F2DE6482F00E6B226 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B2CC12D2DE6482F00E6B226 /* BudgetApp.swift in Sources */,
+				4B2CC12E2DE6482F00E6B226 /* ContentView.swift in Sources */,
+				4B2CC1322DE6484B00E6B226 /* CoreDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
