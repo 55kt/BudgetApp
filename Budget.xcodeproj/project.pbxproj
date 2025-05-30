@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		4B2CC12D2DE6482F00E6B226 /* BudgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CC12A2DE6482F00E6B226 /* BudgetApp.swift */; };
-		4B2CC12E2DE6482F00E6B226 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CC12B2DE6482F00E6B226 /* ContentView.swift */; };
 		4B2CC12F2DE6482F00E6B226 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CC1292DE6482F00E6B226 /* Assets.xcassets */; };
 		4B2CC1322DE6484B00E6B226 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CC1312DE6484B00E6B226 /* CoreDataProvider.swift */; };
+		4B757FE92DE9F6C500B964C7 /* BudgetAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FE72DE9F6C500B964C7 /* BudgetAppModel.xcdatamodeld */; };
+		4B757FEC2DE9F7DB00B964C7 /* BudgetListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FEB2DE9F7DB00B964C7 /* BudgetListScreen.swift */; };
+		4B757FEE2DE9FAB800B964C7 /* AddBudgetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FED2DE9FAB800B964C7 /* AddBudgetScreen.swift */; };
+		4B757FF12DE9FD7100B964C7 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FF02DE9FD7100B964C7 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4B2CC11B2DE6439D00E6B226 /* Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B2CC1292DE6482F00E6B226 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B2CC12A2DE6482F00E6B226 /* BudgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetApp.swift; sourceTree = "<group>"; };
-		4B2CC12B2DE6482F00E6B226 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4B2CC1312DE6484B00E6B226 /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
+		4B757FE82DE9F6C500B964C7 /* BudgetAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudgetAppModel.xcdatamodel; sourceTree = "<group>"; };
+		4B757FEB2DE9F7DB00B964C7 /* BudgetListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListScreen.swift; sourceTree = "<group>"; };
+		4B757FED2DE9FAB800B964C7 /* AddBudgetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetScreen.swift; sourceTree = "<group>"; };
+		4B757FF02DE9FD7100B964C7 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +57,12 @@
 		4B2CC12C2DE6482F00E6B226 /* Budget */ = {
 			isa = PBXGroup;
 			children = (
-				4B2CC1302DE6484000E6B226 /* Providers */,
 				4B2CC12A2DE6482F00E6B226 /* BudgetApp.swift */,
-				4B2CC12B2DE6482F00E6B226 /* ContentView.swift */,
+				4B757FEA2DE9F7A100B964C7 /* Screens */,
+				4B757FEF2DE9FD5B00B964C7 /* Extensions */,
+				4B2CC1302DE6484000E6B226 /* Providers */,
 				4B2CC1292DE6482F00E6B226 /* Assets.xcassets */,
+				4B757FE72DE9F6C500B964C7 /* BudgetAppModel.xcdatamodeld */,
 			);
 			path = Budget;
 			sourceTree = "<group>";
@@ -65,6 +73,23 @@
 				4B2CC1312DE6484B00E6B226 /* CoreDataProvider.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		4B757FEA2DE9F7A100B964C7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4B757FEB2DE9F7DB00B964C7 /* BudgetListScreen.swift */,
+				4B757FED2DE9FAB800B964C7 /* AddBudgetScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4B757FEF2DE9FD5B00B964C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4B757FF02DE9FD7100B964C7 /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B757FEE2DE9FAB800B964C7 /* AddBudgetScreen.swift in Sources */,
+				4B757FF12DE9FD7100B964C7 /* String+Extensions.swift in Sources */,
+				4B757FEC2DE9F7DB00B964C7 /* BudgetListScreen.swift in Sources */,
+				4B757FE92DE9F6C500B964C7 /* BudgetAppModel.xcdatamodeld in Sources */,
 				4B2CC12D2DE6482F00E6B226 /* BudgetApp.swift in Sources */,
-				4B2CC12E2DE6482F00E6B226 /* ContentView.swift in Sources */,
 				4B2CC1322DE6484B00E6B226 /* CoreDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +375,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4B757FE72DE9F6C500B964C7 /* BudgetAppModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4B757FE82DE9F6C500B964C7 /* BudgetAppModel.xcdatamodel */,
+			);
+			currentVersion = 4B757FE82DE9F6C500B964C7 /* BudgetAppModel.xcdatamodel */;
+			path = BudgetAppModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4B2CC1132DE6439D00E6B226 /* Project object */;
 }
