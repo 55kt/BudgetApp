@@ -14,6 +14,7 @@
 		4B757FEC2DE9F7DB00B964C7 /* BudgetListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FEB2DE9F7DB00B964C7 /* BudgetListScreen.swift */; };
 		4B757FEE2DE9FAB800B964C7 /* AddBudgetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FED2DE9FAB800B964C7 /* AddBudgetScreen.swift */; };
 		4B757FF12DE9FD7100B964C7 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FF02DE9FD7100B964C7 /* String+Extensions.swift */; };
+		4B757FF32DEA0B2300B964C7 /* Budget+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FF22DEA0B2300B964C7 /* Budget+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4B757FEB2DE9F7DB00B964C7 /* BudgetListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListScreen.swift; sourceTree = "<group>"; };
 		4B757FED2DE9FAB800B964C7 /* AddBudgetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetScreen.swift; sourceTree = "<group>"; };
 		4B757FF02DE9FD7100B964C7 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		4B757FF22DEA0B2300B964C7 /* Budget+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				4B757FF02DE9FD7100B964C7 /* String+Extensions.swift */,
+				4B757FF22DEA0B2300B964C7 /* Budget+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			files = (
 				4B757FEE2DE9FAB800B964C7 /* AddBudgetScreen.swift in Sources */,
 				4B757FF12DE9FD7100B964C7 /* String+Extensions.swift in Sources */,
+				4B757FF32DEA0B2300B964C7 /* Budget+Extensions.swift in Sources */,
 				4B757FEC2DE9F7DB00B964C7 /* BudgetListScreen.swift in Sources */,
 				4B757FE92DE9F6C500B964C7 /* BudgetAppModel.xcdatamodeld in Sources */,
 				4B2CC12D2DE6482F00E6B226 /* BudgetApp.swift in Sources */,
