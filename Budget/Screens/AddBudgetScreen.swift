@@ -11,29 +11,16 @@ struct AddBudgetScreen: View {
     // MARK: - Properties
     
     @Environment(\.managedObjectContext) private var context
+    @Environment(\.dismiss) private var dismiss
     
     @State private var title: String = ""
     @State private var limit: Double?
     
     @State private var errorMessage: String = ""
     
+    /// --Field Validation
     private var isFormValid: Bool {
         !title.isEmptyOrWhitespace && limit != nil && Double(limit!) > 0
-    }
-    
-    private func saveBudget() {
-        
-        let budget = Budget(context: context)
-        budget.title = title
-        budget.limit = limit ?? 0.0
-        budget.dateCreated = Date()
-        
-        do {
-            try context.save()
-            errorMessage = ""
-        } catch {
-            errorMessage = "Unable to save budget"
-        }
     }
     
     // MARK: - Body
@@ -51,6 +38,7 @@ struct AddBudgetScreen: View {
             Button {
                 if !Budget.exists(context: context, title: title) {
                     saveBudget()
+                    dismiss()
                 } else {
                     errorMessage = "Budget title already exists"
                 }
@@ -61,9 +49,27 @@ struct AddBudgetScreen: View {
             .buttonStyle(.borderedProminent)
             .disabled(!isFormValid)
             
+            /// -- ErrorMessage
             Text(errorMessage)
         }// Form
     }// Body
+    
+    // MARK: - Methods
+    private func saveBudget() {
+        
+        let budget = Budget(context: context)
+        budget.title = title
+        budget.limit = limit ?? 0.0
+        budget.dateCreated = Date()
+        
+        do {
+            try context.save()
+            errorMessage = ""
+        } catch {
+            errorMessage = "Unable to save budget"
+        }
+    }
+    
 }// View
 
 // MARK: - Preview
