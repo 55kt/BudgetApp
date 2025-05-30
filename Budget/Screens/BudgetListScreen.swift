@@ -17,7 +17,7 @@ struct BudgetListScreen: View {
         NavigationStack {
             VStack {
                 List(budgets) { budget in
-                    Text(budget.title ?? "")
+                    BudgetCellView(budget: budget)
                 }// List
             }// VStack
             .navigationTitle("Budget App")
