@@ -44,6 +44,9 @@ struct BudgetDetailScreen: View {
     var body: some View {
         NavigationStack {
             Form {
+                
+                Text("Total \(budget.title ?? "") budget is \(budget.limit, format: .currency(code: Locale.currencyCode))")
+                
                 Section("New expense") {
                     TextField("Title", text: $title)
                     TextField("Amount", value: $amount, format: .number)
@@ -81,12 +84,9 @@ struct BudgetDetailScreen: View {
                         }// VStack
                         
                         ForEach(expenses) { expense in
-                            HStack {
-                                Text(expense.title ?? "")
-                                Spacer()
-                                Text(expense.amount, format: .currency(code: Locale.currencyCode))
-                            }// HStack
+                            ExpenseCellView(expense: expense)
                         }// ForEach
+                        .onDelete(perform: deleteExpense)
                     }// List
                     
                 }// Expenses List
@@ -116,6 +116,19 @@ struct BudgetDetailScreen: View {
         
     }
     
+    private func deleteExpense(_ indexSet: IndexSet) {
+        indexSet.forEach { index in
+            let expense = expenses[index]
+            context.delete(expense)
+        }
+        
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
 }// View
 
 /// --Preview Struct
@@ -131,3 +144,5 @@ struct BudgetDetailScreenContainer: View {
     BudgetDetailScreenContainer()
         .environment(\.managedObjectContext, CoreDataProvider.preview.context)
 }
+
+

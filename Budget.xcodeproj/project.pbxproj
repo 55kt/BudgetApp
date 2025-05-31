@@ -18,6 +18,7 @@
 		4B757FF62DEA0FFC00B964C7 /* BudgetCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FF52DEA0FFC00B964C7 /* BudgetCellView.swift */; };
 		4B757FF82DEA1D0200B964C7 /* BudgetDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FF72DEA1D0200B964C7 /* BudgetDetailScreen.swift */; };
 		4B757FFA2DEA284200B964C7 /* Locale+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FF92DEA284200B964C7 /* Locale+extensions.swift */; };
+		4B757FFC2DEB46FD00B964C7 /* ExpenseCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FFB2DEB46FD00B964C7 /* ExpenseCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		4B757FF52DEA0FFC00B964C7 /* BudgetCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCellView.swift; sourceTree = "<group>"; };
 		4B757FF72DEA1D0200B964C7 /* BudgetDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailScreen.swift; sourceTree = "<group>"; };
 		4B757FF92DEA284200B964C7 /* Locale+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+extensions.swift"; sourceTree = "<group>"; };
+		4B757FFB2DEB46FD00B964C7 /* ExpenseCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				4B757FF52DEA0FFC00B964C7 /* BudgetCellView.swift */,
+				4B757FFB2DEB46FD00B964C7 /* ExpenseCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B757FEE2DE9FAB800B964C7 /* AddBudgetScreen.swift in Sources */,
+				4B757FFC2DEB46FD00B964C7 /* ExpenseCellView.swift in Sources */,
 				4B757FF12DE9FD7100B964C7 /* String+Extensions.swift in Sources */,
 				4B757FF32DEA0B2300B964C7 /* Budget+Extensions.swift in Sources */,
 				4B757FEC2DE9F7DB00B964C7 /* BudgetListScreen.swift in Sources */,
