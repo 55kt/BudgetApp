@@ -43,6 +43,14 @@ class CoreDataProvider {
         sailing.addToExpenses(fuel)
         sailing.addToExpenses(water)
         
+        // insert tags
+        let commonTags = ["Food", "Dining", "Travel", "Entertainmnent", "Shopping", "Transportation", "Utilities", "Groceries", "Health", "Education"]
+        
+        for commonTag in commonTags {
+            let tag = Tag(context: context)
+            tag.name = commonTag
+        }
+        
         do {
            try context.save()
         } catch {
