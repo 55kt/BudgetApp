@@ -43,6 +43,16 @@ class CoreDataProvider {
         sailing.addToExpenses(fuel)
         sailing.addToExpenses(water)
         
+        // List of expenses
+        let foodItems = ["Burger", "Carrot", "Noodles", "Sushi", "Pizza", "Pitta Gyro"]
+        for foodItem in foodItems {
+            let expense = Expense(context: context)
+            expense.title = foodItem
+            expense.amount = Double.random(in: 8...100)
+            expense.dateCreated = Date()
+            expense.budget =  sailing
+        }
+        
         // insert tags
         let commonTags = ["Food", "Dining", "Travel", "Sailing", "Entertainmnent", "Shopping", "Transportation", "Utilities", "Groceries", "Health", "Education"]
         
