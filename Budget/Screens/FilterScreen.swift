@@ -23,10 +23,37 @@ struct FilterScreen: View {
     @State private var startDate = Date()
     @State private var endDate = Date()
     
+    @State private var selectedSortOption: SortOptions? = .title
+    @State private var selectedSortDirection: SortDirection? = .ascending
+    
     // MARK: - Body
     var body: some View {
         NavigationStack {
             List {
+                Section("Sort") {
+                    Picker("Sort Options", selection: $selectedSortOption) {
+                        Text("").tag(Optional<SortOptions>(nil))
+                        ForEach(SortOptions.allCases) { option in
+                            Text(option.title)
+                                .tag(Optional(option))
+                        }
+                    }
+                    .onChange(of: selectedSortOption) {
+                        performSort()
+                    }
+                    
+                    Picker("Sort Direction", selection: $selectedSortDirection) {
+                        Text("").tag(Optional<SortDirection>(nil))
+                        ForEach(SortDirection.allCases) { option in
+                            Text(option.title)
+                                .tag(Optional(option))
+                        }
+                    }
+                    .onChange(of: selectedSortDirection) {
+                        performSort()
+                    }
+                }// Sort section
+                
                 Section("Filtered by tags") {
                     TagsView(selectedTags: $selectedTags)
                         .onChange(of: selectedTags, filterTags)
@@ -56,20 +83,22 @@ struct FilterScreen: View {
                     }
                 }// Section for filtering by date
                 
-                ForEach(filteredExpenses) { expense in
-                    ExpenseCellView(expense: expense)
-                }// List
-                Spacer()
-                
-                HStack {
-                    Spacer()
-                    Button("Show all") {
-                        selectedTags = []
-                        filteredExpenses = expenses.map { $0 }
-                    }
-                    Spacer()
-                }// HStack
-            }// VStack
+                Section("Expenses") {
+                    ForEach(filteredExpenses) { expense in
+                        ExpenseCellView(expense: expense)
+                    }// ForEach
+                    
+                    
+                    HStack {
+                        Spacer()
+                        Button("Show all") {
+                            selectedTags = []
+                            filteredExpenses = expenses.map { $0 }
+                        }
+                        Spacer()
+                    }// HStack
+                }// Expenses Section
+            }// List
             .padding()
             .navigationTitle("Filter")
         }// NavigationStack
@@ -122,6 +151,61 @@ struct FilterScreen: View {
             filteredExpenses = try context.fetch(request)
         } catch {
             print(error)
+        }
+    }
+    
+    private func performSort() {
+        guard let sortOption = selectedSortOption else { return }
+        let request = Expense.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: sortOption.key, ascending: selectedSortDirection == .ascending ? true : false)]
+        
+        do {
+            filteredExpenses = try context.fetch(request)
+        } catch {
+            print(error)
+        }
+    }
+    
+    private enum SortOptions: CaseIterable, Identifiable {
+        case title, date
+        
+        var id: SortOptions {
+            return self
+        }
+        
+        var title: String {
+            switch self {
+            case .title:
+                return "Title"
+            case .date:
+                return "Date"
+            }
+        }
+        
+        var key: String {
+            switch self {
+            case .title:
+                return "title"
+            case .date:
+                return "dateCreated"
+            }
+        }
+    }
+    
+    private enum SortDirection: CaseIterable, Identifiable {
+        case ascending, descending
+        
+        var id: SortDirection {
+            return self
+        }
+        
+        var title: String {
+            switch self {
+            case .ascending:
+                return "Ascending"
+            case .descending:
+                return "Descending"
+            }
         }
     }
     
