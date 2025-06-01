@@ -21,6 +21,7 @@
 		4B757FFC2DEB46FD00B964C7 /* ExpenseCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FFB2DEB46FD00B964C7 /* ExpenseCellView.swift */; };
 		4B757FFF2DEB5C5200B964C7 /* TagsSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FFE2DEB5C5200B964C7 /* TagsSeeder.swift */; };
 		4B7580012DEB615F00B964C7 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7580002DEB615F00B964C7 /* TagsView.swift */; };
+		4B7580032DEC66D700B964C7 /* FilterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7580022DEC66D700B964C7 /* FilterScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		4B757FFB2DEB46FD00B964C7 /* ExpenseCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCellView.swift; sourceTree = "<group>"; };
 		4B757FFE2DEB5C5200B964C7 /* TagsSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsSeeder.swift; sourceTree = "<group>"; };
 		4B7580002DEB615F00B964C7 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		4B7580022DEC66D700B964C7 /* FilterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				4B757FEB2DE9F7DB00B964C7 /* BudgetListScreen.swift */,
 				4B757FED2DE9FAB800B964C7 /* AddBudgetScreen.swift */,
 				4B757FF72DEA1D0200B964C7 /* BudgetDetailScreen.swift */,
+				4B7580022DEC66D700B964C7 /* FilterScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				4B757FE92DE9F6C500B964C7 /* BudgetAppModel.xcdatamodeld in Sources */,
 				4B757FFF2DEB5C5200B964C7 /* TagsSeeder.swift in Sources */,
 				4B757FF82DEA1D0200B964C7 /* BudgetDetailScreen.swift in Sources */,
+				4B7580032DEC66D700B964C7 /* FilterScreen.swift in Sources */,
 				4B757FF62DEA0FFC00B964C7 /* BudgetCellView.swift in Sources */,
 				4B757FFA2DEA284200B964C7 /* Locale+extensions.swift in Sources */,
 				4B2CC12D2DE6482F00E6B226 /* BudgetApp.swift in Sources */,
