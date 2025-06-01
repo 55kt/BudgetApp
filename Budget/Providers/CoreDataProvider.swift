@@ -44,11 +44,14 @@ class CoreDataProvider {
         sailing.addToExpenses(water)
         
         // insert tags
-        let commonTags = ["Food", "Dining", "Travel", "Entertainmnent", "Shopping", "Transportation", "Utilities", "Groceries", "Health", "Education"]
+        let commonTags = ["Food", "Dining", "Travel", "Sailing", "Entertainmnent", "Shopping", "Transportation", "Utilities", "Groceries", "Health", "Education"]
         
         for commonTag in commonTags {
             let tag = Tag(context: context)
             tag.name = commonTag
+            if let tagName = tag.name, ["Sailing", "Travel"].contains(tagName) {
+                fuel.addToTags(tag)
+            }
         }
         
         do {
