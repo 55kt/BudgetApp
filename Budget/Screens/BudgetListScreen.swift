@@ -19,7 +19,7 @@ struct BudgetListScreen: View {
                 List(budgets) { budget in
                     NavigationLink(destination: BudgetDetailScreen(budget: budget)) {
                         BudgetCellView(budget: budget)
-                    }
+                    }// NavigationLink
                 }// List
             }// VStack
             .navigationTitle("Budget App")
