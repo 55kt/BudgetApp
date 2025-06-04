@@ -105,6 +105,7 @@ struct FilterScreen: View {
             .onChange(of: selectedFilterOption, performFilter)
             .padding()
             .navigationTitle("Filter")
+            .navigationBarTitleDisplayMode(.inline)
         }// NavigationStack
     }// Body
     
