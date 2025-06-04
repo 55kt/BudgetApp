@@ -11,6 +11,7 @@
 		4B2CC12F2DE6482F00E6B226 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CC1292DE6482F00E6B226 /* Assets.xcassets */; };
 		4B2CC1322DE6484B00E6B226 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CC1312DE6484B00E6B226 /* CoreDataProvider.swift */; };
 		4B67AE362DEDF647009DE42C /* FilterScreenEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67AE352DEDF647009DE42C /* FilterScreenEnums.swift */; };
+		4B67AE382DF0C10F009DE42C /* Expense+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67AE372DF0C10F009DE42C /* Expense+Extensions.swift */; };
 		4B757FE92DE9F6C500B964C7 /* BudgetAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FE72DE9F6C500B964C7 /* BudgetAppModel.xcdatamodeld */; };
 		4B757FEC2DE9F7DB00B964C7 /* BudgetListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FEB2DE9F7DB00B964C7 /* BudgetListScreen.swift */; };
 		4B757FEE2DE9FAB800B964C7 /* AddBudgetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FED2DE9FAB800B964C7 /* AddBudgetScreen.swift */; };
@@ -31,6 +32,7 @@
 		4B2CC12A2DE6482F00E6B226 /* BudgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetApp.swift; sourceTree = "<group>"; };
 		4B2CC1312DE6484B00E6B226 /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
 		4B67AE352DEDF647009DE42C /* FilterScreenEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreenEnums.swift; sourceTree = "<group>"; };
+		4B67AE372DF0C10F009DE42C /* Expense+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expense+Extensions.swift"; sourceTree = "<group>"; };
 		4B757FE82DE9F6C500B964C7 /* BudgetAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudgetAppModel.xcdatamodel; sourceTree = "<group>"; };
 		4B757FEB2DE9F7DB00B964C7 /* BudgetListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListScreen.swift; sourceTree = "<group>"; };
 		4B757FED2DE9FAB800B964C7 /* AddBudgetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetScreen.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				4B757FF02DE9FD7100B964C7 /* String+Extensions.swift */,
 				4B757FF22DEA0B2300B964C7 /* Budget+Extensions.swift */,
 				4B757FF92DEA284200B964C7 /* Locale+extensions.swift */,
+				4B67AE372DF0C10F009DE42C /* Expense+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				4B757FF32DEA0B2300B964C7 /* Budget+Extensions.swift in Sources */,
 				4B757FEC2DE9F7DB00B964C7 /* BudgetListScreen.swift in Sources */,
 				4B7580012DEB615F00B964C7 /* TagsView.swift in Sources */,
+				4B67AE382DF0C10F009DE42C /* Expense+Extensions.swift in Sources */,
 				4B757FE92DE9F6C500B964C7 /* BudgetAppModel.xcdatamodeld in Sources */,
 				4B757FFF2DEB5C5200B964C7 /* TagsSeeder.swift in Sources */,
 				4B757FF82DEA1D0200B964C7 /* BudgetDetailScreen.swift in Sources */,
