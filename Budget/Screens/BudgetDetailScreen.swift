@@ -6,6 +6,21 @@
 //
 
 import SwiftUI
+import CoreData
+
+struct EditExpenseConfig: Identifiable {
+    let id = UUID()
+    let expense: Expense
+    let childContext: NSManagedObjectContext
+    
+    // context is parent context
+    init?(expenseObjectID: NSManagedObjectID, context: NSManagedObjectContext) {
+        self.childContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        self.childContext.parent = context
+        guard let existingExpense = self.childContext.object(with: expenseObjectID) as? Expense else { return nil }
+        self.expense = existingExpense
+    }
+}
 
 struct BudgetDetailScreen: View {
     // MARK: - Properties
@@ -17,11 +32,12 @@ struct BudgetDetailScreen: View {
     @State private var amount: Double?
     @State private var quantity: Int?
     
-    @State private var expenseToEdit: Expense?
     @State private var showEditExpenseSheet: Bool = false
     @State private var selectedTags: Set<Tag> = []
     
     @FetchRequest(sortDescriptors: []) private var expenses: FetchedResults<Expense>
+    
+    @State private var editExpenseConfig: EditExpenseConfig?
     
     init(budget: Budget) {
         
@@ -82,7 +98,7 @@ struct BudgetDetailScreen: View {
                         ForEach(expenses) { expense in
                             ExpenseCellView(expense: expense)
                                 .onLongPressGesture {
-                                    expenseToEdit = expense
+                                    editExpenseConfig = EditExpenseConfig(expenseObjectID: expense.objectID, context: context)
                                 }// onLongPressGesture
                                 .sensoryFeedback(.selection, trigger: showEditExpenseSheet)
                         }// ForEach
@@ -93,8 +109,17 @@ struct BudgetDetailScreen: View {
                 
             }// Form
             .navigationTitle(budget.title ?? "")
-            .sheet(item: $expenseToEdit) { expenseToEdit in
-                EditExpenseScreen(expense: expenseToEdit)
+            .sheet(item: $editExpenseConfig) { editExpenseConfig in
+                EditExpenseScreen(expense: editExpenseConfig.expense) {
+                    do {
+                        try context.save()
+                        self.editExpenseConfig = nil
+                    } catch {
+                        print(error)
+                    }
+                }
+                .environment(\.managedObjectContext, editExpenseConfig.childContext)
+                    
             }// sheet
         }// NavigationStack
     }// Body

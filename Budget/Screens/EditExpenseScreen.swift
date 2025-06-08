@@ -13,6 +13,7 @@ struct EditExpenseScreen: View {
     @Environment(\.dismiss) private var dismiss
     
     @ObservedObject var expense: Expense
+    let onUpdate: () -> Void
     
     // MARK: - Body
     var body: some View {
@@ -48,7 +49,7 @@ struct EditExpenseScreen: View {
     private func updateExpense() {
         do {
             try context.save()
-            dismiss()
+            onUpdate()
         } catch {
             print(error)
         }
@@ -61,7 +62,7 @@ struct EditExpenseContainerView: View {
     @FetchRequest(sortDescriptors: []) private var expenses: FetchedResults<Expense>
     var body: some View {
         NavigationStack {
-            EditExpenseScreen(expense: expenses[0])
+            EditExpenseScreen(expense: expenses[0], onUpdate: {})
         }
     }
 }
