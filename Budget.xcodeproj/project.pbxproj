@@ -14,6 +14,7 @@
 		4B67AE382DF0C10F009DE42C /* Expense+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67AE372DF0C10F009DE42C /* Expense+Extensions.swift */; };
 		4B67AE3B2DF1F6DC009DE42C /* MappingModel-V1-to-V2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4B67AE3A2DF1F6DC009DE42C /* MappingModel-V1-to-V2.xcmappingmodel */; };
 		4B67AE3E2DF1F76C009DE42C /* MigrationPolicy_V1_to_V2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67AE3D2DF1F76C009DE42C /* MigrationPolicy_V1_to_V2.swift */; };
+		4B67AE402DF5DA12009DE42C /* EditExpenseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67AE3F2DF5DA12009DE42C /* EditExpenseScreen.swift */; };
 		4B757FE92DE9F6C500B964C7 /* BudgetAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FE72DE9F6C500B964C7 /* BudgetAppModel.xcdatamodeld */; };
 		4B757FEC2DE9F7DB00B964C7 /* BudgetListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FEB2DE9F7DB00B964C7 /* BudgetListScreen.swift */; };
 		4B757FEE2DE9FAB800B964C7 /* AddBudgetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B757FED2DE9FAB800B964C7 /* AddBudgetScreen.swift */; };
@@ -38,6 +39,7 @@
 		4B67AE392DF1F602009DE42C /* BudgetAppModel V2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "BudgetAppModel V2.xcdatamodel"; sourceTree = "<group>"; };
 		4B67AE3A2DF1F6DC009DE42C /* MappingModel-V1-to-V2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = "MappingModel-V1-to-V2.xcmappingmodel"; sourceTree = "<group>"; };
 		4B67AE3D2DF1F76C009DE42C /* MigrationPolicy_V1_to_V2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationPolicy_V1_to_V2.swift; sourceTree = "<group>"; };
+		4B67AE3F2DF5DA12009DE42C /* EditExpenseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditExpenseScreen.swift; sourceTree = "<group>"; };
 		4B757FE82DE9F6C500B964C7 /* BudgetAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudgetAppModel.xcdatamodel; sourceTree = "<group>"; };
 		4B757FEB2DE9F7DB00B964C7 /* BudgetListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListScreen.swift; sourceTree = "<group>"; };
 		4B757FED2DE9FAB800B964C7 /* AddBudgetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetScreen.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				4B757FEB2DE9F7DB00B964C7 /* BudgetListScreen.swift */,
 				4B757FED2DE9FAB800B964C7 /* AddBudgetScreen.swift */,
 				4B757FF72DEA1D0200B964C7 /* BudgetDetailScreen.swift */,
+				4B67AE3F2DF5DA12009DE42C /* EditExpenseScreen.swift */,
 				4B67AE332DEDF60D009DE42C /* FilterScreen */,
 			);
 			path = Screens;
@@ -244,6 +247,7 @@
 				4B67AE382DF0C10F009DE42C /* Expense+Extensions.swift in Sources */,
 				4B757FE92DE9F6C500B964C7 /* BudgetAppModel.xcdatamodeld in Sources */,
 				4B757FFF2DEB5C5200B964C7 /* TagsSeeder.swift in Sources */,
+				4B67AE402DF5DA12009DE42C /* EditExpenseScreen.swift in Sources */,
 				4B757FF82DEA1D0200B964C7 /* BudgetDetailScreen.swift in Sources */,
 				4B67AE362DEDF647009DE42C /* FilterScreenEnums.swift in Sources */,
 				4B7580032DEC66D700B964C7 /* FilterScreen.swift in Sources */,

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExpenseCellView: View {
     // MARK: - Properties
-    let expense: Expense
+    @ObservedObject var expense: Expense
     
     // MARK: - Body
     var body: some View {
@@ -19,9 +19,8 @@ struct ExpenseCellView: View {
                 Text("\(expense.quantity)")
                 Spacer()
                 Text(expense.total, format: .currency(code: Locale.currencyCode))
-                
-                
             }// HStack
+            .contentShape(Rectangle())
             
             ScrollView(.horizontal) {
                 HStack {
