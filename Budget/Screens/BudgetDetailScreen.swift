@@ -33,6 +33,7 @@ struct BudgetDetailScreen: View {
     @State private var quantity: Int?
     
     @State private var showEditExpenseSheet: Bool = false
+    @State private var errorMessage: String = ""
     @State private var selectedTags: Set<Tag> = []
     
     @FetchRequest(sortDescriptors: []) private var expenses: FetchedResults<Expense>
@@ -67,13 +68,23 @@ struct BudgetDetailScreen: View {
                     TagsView(selectedTags: $selectedTags)
                     
                     Button {
-                        addExpense()
+                        if !Expense.exists(context: context, title: title, budget: budget) {
+                            addExpense()
+                        } else {
+                            errorMessage = "Expense title should be unique."
+                        }
                     } label: {
                         Text("Save")
                             .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(.borderedProminent)
                     .disabled(!isFormValid)
+                    
+                    if !errorMessage.isEmpty {
+                        Text(errorMessage)
+                            .foregroundStyle(.red)
+                            .font(.footnote)
+                    }
                 }// New expense section
                 
                 Section("Expenses") {
@@ -142,6 +153,7 @@ struct BudgetDetailScreen: View {
             amount = nil
             quantity = nil
             selectedTags = []
+            errorMessage = ""
             
         } catch {
             context.rollback()

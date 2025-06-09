@@ -65,6 +65,7 @@ struct AddBudgetScreen: View {
         do {
             try context.save()
             errorMessage = ""
+            dismiss()
         } catch {
             errorMessage = "Unable to save budget"
         }
