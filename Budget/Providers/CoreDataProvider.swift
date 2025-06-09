@@ -76,18 +76,20 @@ class CoreDataProvider {
     
     init(inMemory: Bool = false) {
         
-        persistentContainer = NSPersistentContainer(name: "BudgetAppModel")
+//        persistentContainer = NSPersistentContainer(name: "BudgetAppModel")
+        persistentContainer = NSPersistentCloudKitContainer(name: "BudgetAppModel")
         
         if inMemory {
             persistentContainer.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
         
+        persistentContainer.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         persistentContainer.loadPersistentStores { _, error in
             if let error {
                 fatalError("Core Data Store failed to initialize \(error)")
             }
         }
-        
+        persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
     }
     
 }
